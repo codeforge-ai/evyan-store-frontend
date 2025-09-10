@@ -4,11 +4,13 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import WhyToUse from "@modules/home/components/why-we-use"
+import StartAdventure from "@modules/home/components/start-adventure/start-adventure"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Evyan - Moto Hub",
   description:
-    "A performant frontend ecommerce starter template with Next.js 15 and Medusa.",
+    "Descoperă lumea motocicletelor cu cele mai bune branduri și echipamente profesionale. CFMoto, Kawasaki, Yamaha și multe altele..",
 }
 
 export default async function Home(props: {
@@ -24,18 +26,16 @@ export default async function Home(props: {
     fields: "id, handle, title",
   })
 
-  if (!collections || !region) {
-    return null
-  }
+  // TODO: Check if region is required
+  // if (!region) {
+  //   return null
+  // }
 
   return (
     <>
       <Hero />
-      <div className="py-12">
-        <ul className="flex flex-col gap-x-6">
-          <FeaturedProducts collections={collections} region={region} />
-        </ul>
-      </div>
+      <WhyToUse />
+      <StartAdventure />
     </>
   )
 }

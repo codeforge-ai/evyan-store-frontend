@@ -2,6 +2,16 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Tipuri Motociclism", path: "/tipuri-motociclism" },
+  { name: "Motociclete", path: "/motociclete" },
+  { name: "Echipamente", path: "/echipamente" },
+  { name: "Service", path: "/service" },
+  { name: "Contact", path: "/contact" },
+  { name: "Despre noi", path: "/despre-noi" },
+];
+
 export default function CheckoutLayout({
   children,
 }: {

@@ -9,18 +9,56 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      transitionProperty: {
-        width: "width margin",
-        height: "height",
-        bg: "background-color",
-        display: "display opacity",
-        visibility: "visibility",
-        padding: "padding-top padding-right padding-bottom padding-left",
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
+    },
+    extend: {
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Keep existing greys
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -35,6 +73,19 @@ module.exports = {
           90: "#111827",
         },
       },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        glow: "var(--shadow-glow)",
+        elegant: "var(--shadow-elegant)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
+        bounce: "var(--transition-bounce)",
+      },
       borderRadius: {
         none: "0px",
         soft: "2px",
@@ -42,6 +93,9 @@ module.exports = {
         rounded: "8px",
         large: "16px",
         circle: "9999px",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       maxWidth: {
         "8xl": "100rem",
@@ -140,6 +194,14 @@ module.exports = {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       animation: {
         ring: "ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
@@ -155,8 +217,18 @@ module.exports = {
         enter: "enter 200ms ease-out",
         "slide-in": "slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)",
         leave: "leave 150ms ease-in forwards",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      transitionProperty: {
+        width: "width margin",
+        height: "height",
+        bg: "background-color",
+        display: "display opacity",
+        visibility: "visibility",
+        padding: "padding-top padding-right padding-bottom padding-left",
       },
     },
   },
-  plugins: [require("tailwindcss-radix")()],
+  plugins: [require("tailwindcss-radix")(), require("tailwindcss-animate")],
 }

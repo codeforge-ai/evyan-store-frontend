@@ -1,35 +1,68 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+"use client"
+import { motion } from "framer-motion";
+
+import { ArrowRight } from "lucide-react";
+import { Button } from "@lib/components/ui/button"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Ecommerce Starter Template
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Powered by Medusa and Next.js
-          </Heading>
-        </span>
-        <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/*/!* Background Image *!/*/}
+      {/*<div*/}
+      {/*  className="absolute inset-0 z-0"*/}
+      {/*  style={{*/}
+      {/*    backgroundImage: `url(${heroImage})`,*/}
+      {/*    backgroundSize: "cover",*/}
+      {/*    backgroundPosition: "center",*/}
+      {/*    opacity: theme ? 0.9 : 0.3,*/}
+      {/*  }}*/}
+      {/*/>*/}
+
+      {/* Hero Content */}
+      <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent"
         >
-          <Button variant="secondary">
-            View on GitHub
-            <Github />
+          Pure Adrenaline
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-xl md:text-2xl text-muted-foreground mb-8"
+        >
+          Descoperă lumea motocicletelor cu cele mai bune branduri și
+          echipamente profesionale
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <Button
+            size="lg"
+            className="bg-gradient-primary hover:shadow-glow group"
+          >
+            <LocalizedClientLink href="/motociclete"> Explorează Motocicletele</LocalizedClientLink>
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </a>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary/10"
+          >
+            <LocalizedClientLink href="/echipamente">Vezi Echipamentele</LocalizedClientLink>
+          </Button>
+        </motion.div>
       </div>
-    </div>
+    </section>
   )
 }
 

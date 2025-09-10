@@ -1,60 +1,64 @@
-import { Suspense } from "react"
-
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
-import SideMenu from "@modules/layout/components/side-menu"
+import { ThemeToggle } from "@lib/components/theme-toggle"
+
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Tipuri Motociclism", path: "/tipuri-motociclism" },
+  { name: "Motociclete", path: "/motociclete" },
+  { name: "Echipamente", path: "/echipamente" },
+  { name: "Service", path: "/service" },
+  { name: "Contact", path: "/contact" },
+  { name: "Despre noi", path: "/despre-noi" },
+]
 
 export default async function Nav() {
-  const regions = await listRegions().then((regions: StoreRegion[]) => regions)
+  // const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
-            <div className="h-full">
-              <SideMenu regions={regions} />
-            </div>
-          </div>
+    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <LocalizedClientLink
+            href="/"
+            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform"
+          ></LocalizedClientLink>
 
-          <div className="flex items-center h-full">
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
-              data-testid="nav-store-link"
-            >
-              Medusa Store
-            </LocalizedClientLink>
-          </div>
-
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <div className="hidden small:flex items-center gap-x-6 h-full">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
-                href="/account"
-                data-testid="nav-account-link"
+                key={item.path}
+                href={item.path}
+                className="px-3 py-2 text-sm font-medium transition-all duration-300 text-muted-foreground hover:text-foreground hover:border-b-2 hover:border-primary/50"
               >
-                Account
+                {item.name}
               </LocalizedClientLink>
-            </div>
-            <Suspense
-              fallback={
-                <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
-                  href="/cart"
-                  data-testid="nav-cart-link"
-                >
-                  Cart (0)
-                </LocalizedClientLink>
-              }
-            >
-              <CartButton />
-            </Suspense>
+            ))}
+            {/* ThemeToggle can be added here if you have a client component */}
           </div>
-        </nav>
-      </header>
-    </div>
+
+          {/* Cart Button */}
+          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
+            {/*<Suspense*/}
+            {/*  fallback={*/}
+            {/*    <LocalizedClientLink*/}
+            {/*      className="px-3 py-2 text-sm font-medium transition-all duration-300 text-muted-foreground hover:text-foreground hover:border-b-2 hover:border-primary/50"*/}
+            {/*      href="/cart"*/}
+            {/*    >*/}
+            {/*      Cart (0)*/}
+            {/*    </LocalizedClientLink>*/}
+            {/*  }*/}
+            {/*>*/}
+            <ThemeToggle />
+            {/*<CartButton />*/}
+            {/*</Suspense>*/}
+          </div>
+        </div>
+      </div>
+    </nav>
   )
 }
