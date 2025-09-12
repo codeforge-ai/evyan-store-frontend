@@ -1,11 +1,12 @@
-'use client'
-import { motion } from "framer-motion";
+"use client"
+import { motion } from "framer-motion"
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader, CardTitle,
+  CardHeader,
+  CardTitle,
 } from "@lib/components/ui/card"
 
 import { Shield, Zap } from "lucide-react"
@@ -22,12 +23,12 @@ const WhyToUse = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Why do we use it?
+            De ce noi?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Pasiunea pentru motociclism vine cu responsabilitatea de a alege
-            echipamentul potrivit și brandurile de încredere. Iată de ce
-            suntem alegerea perfectă pentru aventura ta pe două roți.
+            echipamentul potrivit și brandurile de încredere. Iată de ce suntem
+            alegerea perfectă pentru aventura ta pe două roți.
           </p>
         </motion.div>
 
@@ -132,8 +133,8 @@ const WhyToUse = () => {
                 </div>
                 <CardDescription className="text-base">
                   Colaborăm cu cei mai prestigioși producători din industrie
-                  pentru a-ți oferi motociclete cu performanțe excepționale.
-                  De la motoare de ultimă generație la sisteme electronice
+                  pentru a-ți oferi motociclete cu performanțe excepționale. De
+                  la motoare de ultimă generație la sisteme electronice
                   avansate.
                 </CardDescription>
               </CardHeader>

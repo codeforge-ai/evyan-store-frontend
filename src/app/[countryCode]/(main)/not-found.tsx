@@ -1,20 +1,15 @@
-import { Metadata } from "next"
-
-import InteractiveLink from "@modules/common/components/interactive-link"
-
-export const metadata: Metadata = {
-  title: "404",
-  description: "Something went wrong",
-}
-
-export default function NotFound() {
+const NotFound = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center min-h-[calc(100vh-64px)]">
-      <h1 className="text-2xl-semi text-ui-fg-base">Page not found</h1>
-      <p className="text-small-regular text-ui-fg-base">
-        The page you tried to access does not exist.
-      </p>
-      <InteractiveLink href="/">Go to frontpage</InteractiveLink>
+    <div className="min-h-screen flex items-center justify-center bg-gray-700">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">404</h1>
+        <p className="text-xl text-gray-100 mb-4">Oops! Page not found</p>
+        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+          Return to Home
+        </a>
+      </div>
     </div>
   )
 }
+
+export default NotFound

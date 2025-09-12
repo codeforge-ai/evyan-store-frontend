@@ -6,6 +6,7 @@ import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 import WhyToUse from "@modules/home/components/why-we-use"
 import StartAdventure from "@modules/home/components/start-adventure/start-adventure"
+import Page from "@modules/pages/Index"
 
 export const metadata: Metadata = {
   title: "Evyan - Moto Hub",
@@ -33,7 +34,7 @@ export default async function Home(props: {
 
   return (
     <>
-      <Hero />
+      <Page />
       <WhyToUse />
       <StartAdventure />
     </>
