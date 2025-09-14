@@ -3,15 +3,16 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import { ThemeToggle } from "@lib/components/theme-toggle"
+import LanguageSwitcher from "@modules/layout/components/language-switcher"
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Tipuri Motociclism", path: "/tipuri-motociclism" },
-  { name: "Motociclete", path: "/motociclete" },
-  { name: "Echipamente", path: "/echipamente" },
+  { name: "Tipuri Motociclism", path: "/motorcycling-types" },
+  { name: "Motociclete", path: "/motorcycles" },
+  { name: "Echipamente", path: "/equipments" },
   { name: "Service", path: "/service" },
-  { name: "Contact", path: "/contact" },
-  { name: "Despre noi", path: "/despre-noi" },
+  { name: "Contact", path: "/contact-us" },
+  { name: "Despre noi", path: "/about-us" },
 ]
 
 export default async function Nav() {
@@ -53,6 +54,7 @@ export default async function Nav() {
             {/*    </LocalizedClientLink>*/}
             {/*  }*/}
             {/*>*/}
+            <LanguageSwitcher/>
             <ThemeToggle />
             {/*<CartButton />*/}
             {/*</Suspense>*/}

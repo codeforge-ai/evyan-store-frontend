@@ -1,9 +1,10 @@
+const nextIntl = require("next-intl/plugin")
 const checkEnvVariables = require("./check-env-variables")
 
 checkEnvVariables()
 
 /**
- * @type {import('next').NextConfig}
+ * @type {import("next").NextConfig}
  */
 const nextConfig = {
   reactStrictMode: true,
@@ -44,4 +45,5 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+const withNextIntl = nextIntl("./src/lib/i18n/request.ts")
+module.exports = withNextIntl(nextConfig)

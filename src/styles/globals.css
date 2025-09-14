@@ -38,7 +38,7 @@
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   .dark {
-    /* Dark theme (motorcycle) */
+    /* Dark theme (motorcycles) */
     --background: 0 0% 8%;
     --foreground: 0 0% 95%;
     --card: 0 0% 12%;
@@ -64,7 +64,7 @@
     --gradient-primary: linear-gradient(135deg, hsl(45 100% 40%), hsl(45 100% 50%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 5%));
     --gradient-subtle: linear-gradient(135deg, hsl(0 0% 12%), hsl(0 0% 15%));
-    /* Shadows with motorcycle theme */
+    /* Shadows with motorcycles theme */
     --shadow-glow: 0 0 40px hsl(45 100% 40% / 0.3);
     --shadow-elegant: 0 20px 50px -10px hsl(0 0% 0% / 0.8);
     /* Animations */

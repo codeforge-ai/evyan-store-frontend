@@ -13,7 +13,6 @@ export function ThemeToggle() {
     setTheme(isDark ? "light" : "dark");
   };
 
-  console.log(resolvedTheme, theme)
   if (!resolvedTheme) return null
 
   return (
