@@ -116,45 +116,63 @@ export async function middleware(request: NextRequest) {
   let redirectUrl = request.nextUrl.href
   let response = NextResponse.redirect(redirectUrl, 307)
 
-  const pathnameArr = request.nextUrl.pathname.split("/");
-  const urlHasKnownLocale = routing.locales.includes(pathnameArr[1]);
+  const pathnameArr = request.nextUrl.pathname.split("/")
+  const [seg1, seg2] = pathnameArr.slice(1, 3) // primele două segmente după "/"
+
+  let locale: string | undefined
+  let countryCode: string | undefined
+
+  // dacă primul e limbă și al doilea e cod țară
+  if (routing.locales.includes(seg1) && seg2?.length === 2) {
+    locale = seg1
+    countryCode = seg2.toLowerCase()
+  }
+  // dacă primul e cod țară și al doilea e limbă
+  else if (seg1?.length === 2 && routing.locales.includes(seg2)) {
+    countryCode = seg1.toLowerCase()
+    locale = seg2
+  }
+  const urlHasKnownLocale = routing.locales.includes(pathnameArr[1])
 
   // need to redirect manually if we provide a wrong locale when a countryCode is included
   const urlHasUnknownLocale =
     !urlHasKnownLocale &&
     pathnameArr?.[1]?.length == 2 &&
-    (pathnameArr?.[2] ? pathnameArr[2].length == 2 : true);
-
+    (pathnameArr?.[2] ? pathnameArr[2].length == 2 : true)
 
   const redirectPath =
     request.nextUrl.pathname === "/"
       ? ""
       : urlHasKnownLocale || urlHasUnknownLocale
-        ? pathnameArr.slice(2).join("/")
-        : request.nextUrl.pathname
-
+      ? pathnameArr.slice(2).join("/")
+      : request.nextUrl.pathname
 
   const queryString = request.nextUrl.search ? request.nextUrl.search : ""
 
   if (urlHasUnknownLocale) {
-    console.log('in unknown locale', urlHasUnknownLocale, queryString, redirectPath)
+    console.log(
+      "in unknown locale",
+      urlHasUnknownLocale,
+      queryString,
+      redirectPath
+    )
     redirectUrl = `${request.nextUrl.origin}/${routing.defaultLocale}/${redirectPath}${queryString}`
     response = NextResponse.redirect(`${redirectUrl}`, 307)
   }
 
-  let cacheIdCookie = request.cookies.get("_medusa_cache_id");
+  let cacheIdCookie = request.cookies.get("_medusa_cache_id")
 
-  let cacheId = cacheIdCookie?.value || crypto.randomUUID();
+  let cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  const regionMap = await getRegionMap(cacheId);
+  const regionMap = await getRegionMap(cacheId)
 
-  const countryCodePathnameIndex = urlHasKnownLocale ? 2 : 1;
+  const countryCodePathnameIndex = urlHasKnownLocale ? 2 : 1
 
-  const countryCode =
-    regionMap &&
-    (await getCountryCode(request, regionMap, countryCodePathnameIndex));
-
-
+  // const countryCode =
+  //   regionMap &&
+  //   (await getCountryCode(request, regionMap, countryCodePathnameIndex))
+  // TODO reviziteaza zona asta
+  
   const urlHasCountryCode =
     countryCode &&
     request.nextUrl.pathname.split("/")[countryCodePathnameIndex] == countryCode

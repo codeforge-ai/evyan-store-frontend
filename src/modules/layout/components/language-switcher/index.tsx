@@ -55,7 +55,7 @@ const LanguageSwitcher = () => {
   }
 
   // For debugging - you can see this in the console
-  console.log(pathname,' red')
+  console.log(pathname, " red")
 
   return (
     <DropdownMenu>
