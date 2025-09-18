@@ -2,5 +2,245 @@
   "language": {
     "en": "English",
     "ro": "Romanian"
+  },
+  "nav": {
+    "home": "Home",
+    "motorcyclingTypes": "Motorcycling Types",
+    "motorcycles": "Motorcycles",
+    "equipments": "Equipments",
+    "service": "Service",
+    "contact": "Contact",
+    "aboutUs": "About Us"
+  },
+  "hero": {
+    "pureAdrenaline": "Pure Adrenaline",
+    "discoverWorld": "Discover the world of motorcycles with the best brands and professional equipment.",
+    "exploreMotorcycles": "Explore Motorcycles",
+    "callNow": "Call Now: 0740 301 532",
+    "ourBrands": "Our Brands",
+    "popularModels": "Popular Models:",
+    "seeDetails": "See Details",
+    "motoEquipments": "Motorcycle Equipment",
+    "brands": "Brands:",
+    "availableTypes": "Available Types:",
+    "startAdventure": "Start Your Adventure",
+    "ctaDescription": "Whether you are a beginner or an experienced rider, we have the perfect solutions for you. Explore our full range and find your riding style.",
+    "seeAllMotorcycles": "See All Motorcycles",
+    "contactSpecialist": "Contact the Specialist"
+  },
+  "whyToUse": {
+    "title": "Why us?",
+    "subtitle": "Passion for motorcycling comes with the responsibility of choosing the right equipment and trusted brands. Here’s why we’re the perfect choice for your two-wheeled adventure.",
+    "safety": {
+      "title": "Maximum Safety",
+      "description": "We only offer the highest quality equipment, certified according to European safety standards. Every product in our portfolio is rigorously tested to give you maximum protection on any adventure.",
+      "list": [
+        "CE and DOT certifications for all products",
+        "Rigorous testing in extreme conditions",
+        "Specialized consultancy for every customer"
+      ],
+      "highlightTitle": "Certified Protection",
+      "highlightText": "The highest safety standards"
+    },
+    "performance": {
+      "title": "Top Performance",
+      "description": "We work with the most prestigious manufacturers in the industry to bring you motorcycles with exceptional performance. From state-of-the-art engines to advanced electronics.",
+      "list": [
+        "Engines with Formula 1 technology",
+        "Smart electronic systems",
+        "Aerodynamics optimized for speed"
+      ],
+      "highlightTitle": "Performance",
+      "highlightText": "Cutting-edge technology for unique experiences"
+    }
+  },
+  "startAdventure": {
+    "title": "Start Your Adventure",
+    "subtitle": "Whether you're a beginner or an experienced rider, we have the perfect solutions for you. Explore our full range and find your riding style.",
+    "buttons": {
+      "motorcycles": "See All Motorcycles",
+      "contact": "Contact a Specialist"
+    }
+  },
+  "motorcyclingTypesPage": {
+    "title": "Types of Motorcycling",
+    "subtitle": "Discover the different styles of motorcycling and the recommended gear for each adventure",
+    "recommendedGear": "Recommended Gear:",
+    "enduroTitle": "Enduro",
+    "enduroDescription": "For off-road adventure and tough terrains",
+    "enduroGear1": "Off-road helmet",
+    "enduroGear2": "Knee guards",
+    "enduroGear3": "Enduro boots",
+    "enduroGear4": "Ventilated jersey",
+    "touringTitle": "Touring",
+    "touringDescription": "Maximum comfort for long journeys",
+    "touringGear1": "Modular helmet",
+    "touringGear2": "Waterproof jacket",
+    "touringGear3": "Heated gloves",
+    "touringGear4": "Touring pants",
+    "adventureTitle": "Adventure",
+    "adventureDescription": "Versatility for road and off-road",
+    "adventureGear1": "Adventure helmet",
+    "adventureGear2": "Body armor",
+    "adventureGear3": "ADV boots",
+    "adventureGear4": "3-in-1 jacket",
+    "urbanTitle": "Urban",
+    "urbanDescription": "Efficient urban mobility",
+    "urbanGear1": "Jet helmet",
+    "urbanGear2": "Urban jacket",
+    "urbanGear3": "Short gloves",
+    "urbanGear4": "Jeans pants",
+    "circuitTitle": "Circuit/Sport",
+    "circuitDescription": "Maximum performance on the track",
+    "circuitGear1": "Full-face helmet",
+    "circuitGear2": "Leather suit",
+    "circuitGear3": "Racing gloves",
+    "circuitGear4": "Sport boots"
+  },
+  "aboutUsPage": {
+    "title": "About Us",
+    "intro": "We are a team of passionate professionals, dedicated to offering the highest quality standards in automotive services.",
+    "whoWeAreTitle": "Who We Are",
+    "whoWeAreText1": "We are an authorized auto service with a team of specialized technicians working to ensure the optimal performance of your vehicle. We offer a wide range of services for all brands in our portfolio, using state-of-the-art diagnostic equipment.",
+    "whoWeAreText2": "We take pride in our experienced team that focuses on details and customer satisfaction. Every repair is carried out according to the strictest quality standards, with your safety and comfort as our priorities.",
+    "visionTitle": "Our Vision",
+    "visionText1": "Our vision is to become the most trusted auto service in the region, offering high-quality, transparent, and accessible services. We aim to be every client’s trusted partner, helping them maintain the performance and safety of their vehicle in the long term.",
+    "visionText2": "We believe in open communication with our clients, ensuring they are informed about every step of the repair and maintenance process. We are dedicated to providing personalized and efficient solutions that meet the needs of every vehicle.",
+    "teamTitle": "Our Team",
+    "teamDescription": "Our team consists of experienced professionals, each member bringing their expertise and passion for the automotive field.",
+    "qualityTitle": "Guaranteed Quality",
+    "qualityDescription": "We make sure that every job performed meets the highest standards, using original parts and advanced technologies.",
+    "safetyTitle": "Your Safety, Our Priority",
+    "safetyDescription": "Every repair and maintenance service is carried out with maximum attention to your safety, respecting the strictest safety standards.",
+    "contactTitle": "Contact Us",
+    "contactText": "Do you want to learn more about our services or schedule an appointment? Contact us now for more information or to discuss your needs.",
+    "contactButton": "Contact Us",
+    "callButton": "Call Now: 0740 301 532"
+  },
+  "contactUsPage": {
+    "contact": "Contact",
+    "contactSubtitle": "We are here for you! Contact us for information, offers, or service appointments.",
+    "contactInfo": "Contact Information",
+    "contactInfoDesc": "Find out how to reach and contact us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "program": "Schedule",
+    "programDetails": "Monday - Friday: 9:00 - 17:00\nSaturday: 9:00 - 12:00\nSunday: Closed",
+    "followUs": "Follow Us",
+    "followUsDesc": "Stay connected with us on social media",
+    "ourLocation": "Our Location",
+    "ourLocationDesc": "Come visit us in our showroom"
+  },
+  "servicePage": {
+    "pageTitle": "Authorized Service",
+    "pageSubtitle": "Professional authorized service for all brands in our portfolio. Our team of specialists guarantees the highest quality standards.",
+    "servicesTitle": "Our Services",
+    "warrantyTitle": "Warranty and Quality",
+    "warrantyText1": "We are an authorized service center for all brands in our portfolio, which means that all work performed is covered by the manufacturer's warranty.",
+    "warrantyText2": "We use only original parts and manufacturer-approved diagnostic tools to ensure the highest quality of service.",
+    "extendedWarranty": "Extended Warranty",
+    "extendedWarrantyDetails": "All work comes with an extended warranty of 12 months or 20,000 km, whichever comes first.",
+    "appointmentTitle": "Book an Appointment",
+    "appointmentSubtitle": "Contact us to schedule a service appointment. We offer free consultation and detailed estimates for all services.",
+    "bookOnline": "Book Online",
+    "callNow": "Call Now: +40 759 594 337",
+    "serviceList": [
+      "Complete overhaul according to manufacturer specifications",
+      "Computerized diagnostics with state-of-the-art equipment",
+      "Engine, transmission and electronic system repairs",
+      "Replacement of original and high-quality aftermarket parts",
+      "Brake, clutch and suspension system service",
+      "Technical preparation for the riding season",
+      "Technical consultancy and maintenance recommendations"
+    ],
+    "services": {
+      "authorizedService": {
+        "title": "Authorized Service",
+        "description": "Authorized service for all brands in the portfolio"
+      },
+      "warrantyRepairs": {
+        "title": "Warranty Repairs",
+        "description": "All manufacturer warranty repairs"
+      },
+      "professionalMaintenance": {
+        "title": "Professional Maintenance",
+        "description": "Complete maintenance and care services"
+      },
+      "flexibleSchedule": {
+        "title": "Flexible Schedule",
+        "description": "Flexible appointments tailored to your needs"
+      }
+    }
+  },
+  "equipmentsPage": {
+    "title": "Equipment",
+    "description": "Professional protective gear for motorcyclists, from the most renowned brands",
+    "availableBrands": "Available Brands:",
+    "types": "Types:",
+    "viewDetails": "View Details",
+    "expertConsulting": "Expert Consulting",
+    "expertConsultingDescription": "Not sure which equipment to choose? Our experts will help you find the perfect gear for your riding style and budget.",
+    "contactSpecialist": "Contact the Specialist"
+  },
+  "motorcyclesPage": {
+    "title": "Motorcycles",
+    "description": "Explore our range of motorcycles from the world's most respected manufacturers",
+    "popularModels": "Popular Models:",
+    "viewDetails": "View Details"
+  },
+  "cfMotoPage": {
+    "backToMotorcycles": "Back to Motorcycles",
+    "cfMoto": "CFMoto",
+    "description": "Modern motorcycles with advanced technology, offering a perfect combination of performance and affordability",
+    "engine": "Engine:",
+    "power": "Power:",
+    "features": "Features:",
+    "requestOffer": "Request Offer"
+  },
+  "kawasakiPage": {
+    "backToMotorcycles": "Back to Motorcycles",
+    "cfMoto": "CFMoto",
+    "description": "Modern motorcycles with advanced technology, offering a perfect balance of performance and accessibility",
+    "engine": "Engine:",
+    "power": "Power:",
+    "features": "Features:",
+    "requestOffer": "Request Offer",
+    "abs": "ABS",
+    "cruiseControl": "Cruise Control",
+    "driftControl": "Drift Control",
+    "tft": "TFT",
+    "registerable": "Registerable: Yes",
+    "eligibleRabla": "Rabla Eligible",
+    "price": "Price:"
+  },
+  "yamahaPage": {
+    "backToMotorcycles": "Back to Motorcycles",
+    "yamaha": "Yamaha",
+    "description": "Japanese innovation and quality in every motorcycle, for true enthusiasts",
+    "engine": "Engine:",
+    "power": "Power:",
+    "features": "Features:",
+    "requestOffer": "Request Offer",
+    "abs": "ABS",
+    "cruiseControl": "Cruise Control",
+    "driftControl": "Drift Control",
+    "tft": "TFT",
+    "registerable": "Registerable: Yes",
+    "eligibleRabla": "Rabla Eligible",
+    "price": "Price:"
+  },
+  "equipments": {
+    "helmetsTitle": "Helmets",
+    "helmetsDescription": "Maximum protection for the head",
+    "glovesBootsTitle": "Gloves / Boots",
+    "glovesBootsDescription": "Protection and control for hands/feet",
+    "gearTitle": "Equipment (Gear)",
+    "gearDescription": "Complete protective gear"
+  },
+  "brands": {
+    "kawasakiDescription": "The legendary Japanese brand, known for performance and reliability",
+    "yamahaDescription": "Japanese innovation and quality in every motorcycle. Performance and style",
+    "cfmotoDescription": "Modern motorcycles with advanced technology and competitive prices"
   }
 }

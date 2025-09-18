@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-
+import { useTranslations } from "next-intl"
 import {
   Card,
   CardContent,
@@ -12,9 +12,12 @@ import {
 import { Shield, Zap } from "lucide-react"
 
 const WhyToUse = () => {
+  const t = useTranslations("whyToUse")
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
+        {/* Title + Subtitle */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,17 +26,15 @@ const WhyToUse = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            De ce noi?
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pasiunea pentru motociclism vine cu responsabilitatea de a alege
-            echipamentul potrivit și brandurile de încredere. Iată de ce suntem
-            alegerea perfectă pentru aventura ta pe două roți.
+            {t("subtitle")}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Text-Image Section 1 */}
+          {/* Safety Section */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,35 +47,27 @@ const WhyToUse = () => {
                 <div className="flex items-center mb-4">
                   <Shield className="w-8 h-8 text-primary mr-3" />
                   <CardTitle className="text-2xl text-primary">
-                    Siguranță Maximă
+                    {t("safety.title")}
                   </CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  Oferim doar echipamentele de cea mai înaltă calitate,
-                  certificate conform standardelor europene de siguranță.
-                  Fiecare produs din portofoliul nostru este testat rigorosos
-                  pentru a-ți oferi protecția maximă în orice aventură.
+                  {t("safety.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Certificări CE și DOT pentru toate produsele
-                  </li>
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Testare riguroasă în condiții extreme
-                  </li>
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Consultanță specializată pentru fiecare client
-                  </li>
+                  {t.raw("safety.list").map((item: string, i: number) => (
+                    <li key={i} className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
           </motion.div>
 
+          {/* Safety Highlight */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -86,16 +79,14 @@ const WhyToUse = () => {
               <div className="bg-card rounded-lg p-8 text-center">
                 <Shield className="w-24 h-24 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-primary mb-2">
-                  Protecție Certificată
+                  {t("safety.highlightTitle")}
                 </h3>
-                <p className="text-muted-foreground">
-                  Standardele cele mai înalte de siguranță
-                </p>
+                <p className="text-muted-foreground">{t("safety.highlightText")}</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Text-Image Section 2 */}
+          {/* Performance Highlight */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -107,15 +98,14 @@ const WhyToUse = () => {
               <div className="bg-card rounded-lg p-8 text-center">
                 <Zap className="w-24 h-24 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-primary mb-2">
-                  Performanță
+                  {t("performance.highlightTitle")}
                 </h3>
-                <p className="text-muted-foreground">
-                  Tehnologie de vârf pentru experiențe unice
-                </p>
+                <p className="text-muted-foreground">{t("performance.highlightText")}</p>
               </div>
             </div>
           </motion.div>
 
+          {/* Performance Section */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -128,30 +118,21 @@ const WhyToUse = () => {
                 <div className="flex items-center mb-4">
                   <Zap className="w-8 h-8 text-primary mr-3" />
                   <CardTitle className="text-2xl text-primary">
-                    Performanță de Vârf
+                    {t("performance.title")}
                   </CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  Colaborăm cu cei mai prestigioși producători din industrie
-                  pentru a-ți oferi motociclete cu performanțe excepționale. De
-                  la motoare de ultimă generație la sisteme electronice
-                  avansate.
+                  {t("performance.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Motoare cu tehnologii de Formula 1
-                  </li>
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Sisteme electronice inteligente
-                  </li>
-                  <li className="flex items-center text-muted-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Aerodinamică optimizată pentru viteză
-                  </li>
+                  {t.raw("performance.list").map((item: string, i: number) => (
+                    <li key={i} className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>

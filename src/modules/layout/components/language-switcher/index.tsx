@@ -9,9 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@lib/components/ui/dropdown-menu"
 import { useTranslations } from "next-intl"
-import { usePathname, useRouter, Link } from "@lib/i18n/navigation"
-import { useParams } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { usePathname, useRouter } from "@lib/i18n/navigation"
 
 export function buildLocalizedPath({
   locale,
@@ -32,30 +30,15 @@ const languages = [
 
 const LanguageSwitcher = () => {
   const locale = useLocale()
-  const params = useParams()
   const pathname = usePathname()
   const router = useRouter()
   const t = useTranslations("language")
 
   const currentLanguage = languages.find((lang) => lang.code === locale)
 
-  // Get the current path after the locale/region segment
-  const getPathAfterLocaleRegion = () => {
-    const pathSegments = pathname.split("/")
-    // Remove empty first segment, locale and region
-    if (pathSegments.length > 3) {
-      return "/" + pathSegments.slice(3).join("/")
-    }
-    return ""
-  }
-
   function handleLanguageChange(newLocale: string) {
-    // router.replace(`/${newLocale}${pathname}`, {})
     window.location.replace(`/${newLocale}${pathname}`)
   }
-
-  // For debugging - you can see this in the console
-  console.log(pathname, " red")
 
   return (
     <DropdownMenu>

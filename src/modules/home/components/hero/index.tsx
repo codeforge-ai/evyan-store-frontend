@@ -13,10 +13,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@lib/components/ui/card"
-import { EQUIPMENTS_CATEGORIES, MOTORCYCLES_BRANDS } from "app/[locale]/[countryCode]/const/constants"
+import { useTranslations } from "next-intl"
+import { useLocaleBrands } from "app/[locale]/[countryCode]/hooks/use-locale-brands"
+import { useLocaleEquipmentCategories } from "app/[locale]/[countryCode]/hooks/use-locale-equipment-categories"
 
 const Hero = () => {
   const { theme } = useTheme()
+  const t = useTranslations("hero")
+
+  const brands = useLocaleBrands()
+  const equipmentCategories = useLocaleEquipmentCategories()
 
   return (
     <div className="min-h-screen bg-gradient-dark">
@@ -32,7 +38,6 @@ const Hero = () => {
             opacity: theme === "light" ? 0.9 : 0.6,
           }}
         />
-        {/* Overlay 3D */}
         <div className="absolute inset-0 z-10 hidden md:block"></div>
 
         {/* Text Hero */}
@@ -43,7 +48,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent"
           >
-            Adrenalină Pură
+            {t("pureAdrenaline")}
           </motion.h1>
 
           <motion.p
@@ -52,8 +57,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8"
           >
-            Descoperă lumea motocicletelor cu cele mai bune branduri și
-            echipamente profesionale.
+            {t("discoverWorld")}
           </motion.p>
 
           <motion.div
@@ -68,7 +72,7 @@ const Hero = () => {
               asChild
             >
               <LocalizedClientLink href="/motorcycles">
-                Explorează Motocicletele
+                {t("exploreMotorcycles")}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </LocalizedClientLink>
             </Button>
@@ -78,7 +82,7 @@ const Hero = () => {
               className="border-primary text-primary hover:bg-primary/10"
               asChild
             >
-              <a href="tel:0740301532">Sună Acum: 0740 301 532</a>
+              <a href="tel:+40740301532">{t("callNow")}</a>
             </Button>
           </motion.div>
         </div>
@@ -94,11 +98,11 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent"
           >
-            Brandurile Noastre
+            {t("ourBrands")}
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {MOTORCYCLES_BRANDS.map((brand, index) => (
+            {brands?.map((brand, index) => (
               <Card
                 key={index}
                 className="bg-card border-border hover:shadow-glow transition-all duration-300 hover:-translate-y-2"
@@ -120,7 +124,7 @@ const Hero = () => {
                 </CardHeader>
                 <CardContent>
                   <h4 className="font-semibold mb-3 text-foreground text-center">
-                    Modele populare:
+                    {t("popularModels")}
                   </h4>
                   <ul className="space-y-2 mb-6">
                     {brand.models.map((model, modelIndex) => (
@@ -138,7 +142,7 @@ const Hero = () => {
                     className="w-full bg-gradient-primary hover:shadow-glow"
                   >
                     <LocalizedClientLink href={brand.path}>
-                      Vezi Detalii
+                      {t("seeDetails")}
                     </LocalizedClientLink>
                   </Button>
                 </CardContent>
@@ -158,10 +162,10 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-12 text-center bg-gradient-primary bg-clip-text text-transparent"
           >
-            Echipamente Moto
+            {t("motoEquipments")}
           </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {EQUIPMENTS_CATEGORIES.map((item, index) => (
+            {equipmentCategories?.map((item, index) => (
               <Card
                 key={index}
                 className="bg-card border-border hover:shadow-glow transition-all duration-300 hover:-translate-y-2"
@@ -183,13 +187,13 @@ const Hero = () => {
                 </CardHeader>
                 <CardContent>
                   <h4 className="font-semibold mb-2 text-foreground text-center">
-                    Branduri:
+                    {t("brands")}
                   </h4>
                   <p className="text-muted-foreground text-center mb-3">
                     {item.brands.join(", ")}
                   </p>
                   <h4 className="font-semibold mb-2 text-foreground text-center">
-                    Tipuri disponibile:
+                    {t("availableTypes")}
                   </h4>
                   <p className="text-muted-foreground text-center mb-6">
                     {item.types.join(", ")}
@@ -213,12 +217,10 @@ const Hero = () => {
           >
             <Star className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4 text-primary">
-              Începe Aventura Ta
+              {t("startAdventure")}
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Fie că ești începător sau motociclist experimentat, avem soluțiile
-              perfecte pentru tine. Descoperă gama noastră completă și
-              găsește-ți stilul de conducere.
+              {t("ctaDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -227,7 +229,7 @@ const Hero = () => {
                 asChild
               >
                 <LocalizedClientLink href="/motorcycles">
-                  Vezi Toate Motocicletele
+                  {t("seeAllMotorcycles")}
                 </LocalizedClientLink>
               </Button>
               <Button
@@ -237,7 +239,7 @@ const Hero = () => {
                 asChild
               >
                 <LocalizedClientLink href="/contact-us">
-                  Contactează Specialistul
+                  {t("contactSpecialist")}
                 </LocalizedClientLink>
               </Button>
             </div>
