@@ -2,5 +2,245 @@
   "language": {
     "en": "Engleză",
     "ro": "Română"
+  },
+  "nav": {
+    "home": "Acasă",
+    "motorcyclingTypes": "Tipuri Motociclism",
+    "motorcycles": "Motociclete",
+    "equipments": "Echipamente",
+    "service": "Service",
+    "contact": "Contact",
+    "aboutUs": "Despre noi"
+  },
+  "hero": {
+    "pureAdrenaline": "Adrenalină Pură",
+    "discoverWorld": "Descoperă lumea motocicletelor cu cele mai bune branduri și echipamente profesionale.",
+    "exploreMotorcycles": "Explorează Motocicletele",
+    "callNow": "Sună Acum: 740 301 532",
+    "ourBrands": "Brandurile Noastre",
+    "popularModels": "Modele populare:",
+    "seeDetails": "Vezi Detalii",
+    "motoEquipments": "Echipamente Moto",
+    "brands": "Branduri:",
+    "availableTypes": "Tipuri disponibile:",
+    "startAdventure": "Începe Aventura Ta",
+    "ctaDescription": "Fie că ești începător sau motociclist experimentat, avem soluțiile perfecte pentru tine. Descoperă gama noastră completă și găsește-ți stilul de conducere.",
+    "seeAllMotorcycles": "Vezi Toate Motocicletele",
+    "contactSpecialist": "Contactează Specialistul"
+  },
+  "whyToUse": {
+    "title": "De ce noi?",
+    "subtitle": "Pasiunea pentru motociclism vine cu responsabilitatea de a alege echipamentul potrivit și brandurile de încredere. Iată de ce suntem alegerea perfectă pentru aventura ta pe două roți.",
+    "safety": {
+      "title": "Siguranță Maximă",
+      "description": "Oferim doar echipamentele de cea mai înaltă calitate, certificate conform standardelor europene de siguranță. Fiecare produs din portofoliul nostru este testat riguros pentru a-ți oferi protecția maximă în orice aventură.",
+      "list": [
+        "Certificări CE și DOT pentru toate produsele",
+        "Testare riguroasă în condiții extreme",
+        "Consultanță specializată pentru fiecare client"
+      ],
+      "highlightTitle": "Protecție Certificată",
+      "highlightText": "Standardele cele mai înalte de siguranță"
+    },
+    "performance": {
+      "title": "Performanță de Vârf",
+      "description": "Colaborăm cu cei mai prestigioși producători din industrie pentru a-ți oferi motociclete cu performanțe excepționale. De la motoare de ultimă generație la sisteme electronice avansate.",
+      "list": [
+        "Motoare cu tehnologii de Formula 1",
+        "Sisteme electronice inteligente",
+        "Aerodinamică optimizată pentru viteză"
+      ],
+      "highlightTitle": "Performanță",
+      "highlightText": "Tehnologie de vârf pentru experiențe unice"
+    }
+  },
+  "startAdventure": {
+    "title": "Începe Aventura Ta",
+    "subtitle": "Fie că ești începător sau motociclist experimentat, avem soluțiile perfecte pentru tine. Descoperă gama noastră completă și găsește-ți stilul de conducere.",
+    "buttons": {
+      "motorcycles": "Vezi Toate Motocicletele",
+      "contact": "Contactează Specialistul"
+    }
+  },
+  "motorcyclingTypesPage": {
+    "title": "Tipuri de Motociclism",
+    "subtitle": "Descoperă diversele stiluri de motociclism și echipamentele recomandate pentru fiecare aventură",
+    "recommendedGear": "Echipament recomandat:",
+    "enduroTitle": "Enduro",
+    "enduroDescription": "Pentru aventura off-road și terenuri dificile",
+    "enduroGear1": "Cască off-road",
+    "enduroGear2": "Protecții genunchi",
+    "enduroGear3": "Bocanci enduro",
+    "enduroGear4": "Jerseu ventilat",
+    "touringTitle": "Touring",
+    "touringDescription": "Confort maxim pentru călătorii lungi",
+    "touringGear1": "Cască modulară",
+    "touringGear2": "Geacă impermeabilă",
+    "touringGear3": "Mănuși încălzite",
+    "touringGear4": "Pantaloni touring",
+    "adventureTitle": "Adventure",
+    "adventureDescription": "Versatilitate pentru drum și off-road",
+    "adventureGear1": "Cască adventure",
+    "adventureGear2": "Protecții corp",
+    "adventureGear3": "Bocanci ADV",
+    "adventureGear4": "Geacă 3-în-1",
+    "urbanTitle": "Urban",
+    "urbanDescription": "Mobilitate urbană eficientă",
+    "urbanGear1": "Cască jet",
+    "urbanGear2": "Geacă urban",
+    "urbanGear3": "Mănuși scurte",
+    "urbanGear4": "Pantaloni jeans",
+    "circuitTitle": "Circuit/Sport",
+    "circuitDescription": "Performanță maximă pe pistă",
+    "circuitGear1": "Cască integrală",
+    "circuitGear2": "Combinezon piele",
+    "circuitGear3": "Mănuși racing",
+    "circuitGear4": "Bocanci sport"
+  },
+  "aboutUsPage": {
+    "title": "Despre Noi",
+    "intro": "Suntem o echipă de profesioniști pasionați, dedicați să oferim cele mai înalte standarde de calitate în serviciile auto.",
+    "whoWeAreTitle": "Cine Suntem",
+    "whoWeAreText1": "Suntem un service auto autorizat, cu o echipă de tehnicieni specializați care lucrează pentru a asigura performanța optimă a vehiculului tău. Oferim o gamă largă de servicii pentru toate mărcile din portofoliu, utilizând echipamente de diagnosticare de ultimă generație.",
+    "whoWeAreText2": "Ne mândrim cu o echipă experimentată care pune accent pe detalii și pe satisfacția clientului. Fiecare reparație este realizată conform celor mai stricte standarde de calitate, iar siguranța și confortul tău sunt priorități pentru noi.",
+    "visionTitle": "Viziunea Noastră",
+    "visionText1": "Viziunea noastră este de a deveni cel mai de încredere service auto din regiune, oferind servicii de înaltă calitate, transparente și accesibile. Ne dorim să fim partenerul de încredere al fiecărui client, ajutându-l să mențină performanța și siguranța vehiculului său pe termen lung.",
+    "visionText2": "Credem într-o comunicare deschisă cu clienții noștri, asigurându-ne că sunt informați despre fiecare pas al procesului de reparație și întreținere. Suntem dedicați să oferim soluții personalizate și eficiente, care să răspundă nevoilor fiecărui vehicul.",
+    "teamTitle": "Echipa Noastră",
+    "teamDescription": "Echipa noastră este formată din profesioniști cu experiență, fiecare membru aducând expertiza și pasiunea sa pentru domeniul auto.",
+    "qualityTitle": "Calitate Garantată",
+    "qualityDescription": "Ne asigurăm că fiecare lucrare efectuată este conformă cu cele mai înalte standarde, utilizând piese originale și tehnologii avansate.",
+    "safetyTitle": "Siguranța Ta, Prioritatea Noastră",
+    "safetyDescription": "Fiecare reparație și întreținere sunt realizate cu maximă atenție pentru siguranța ta, respectând cele mai riguroase norme de siguranță.",
+    "contactTitle": "Contactează-ne",
+    "contactText": "Vrei să afli mai multe despre serviciile noastre sau să programezi o întâlnire? Contactează-ne acum pentru informații suplimentare sau pentru a discuta despre nevoile tale.",
+    "contactButton": "Contactează-ne",
+    "callButton": "Sună Acum: 0740 301 532"
+  },
+  "contactUsPage": {
+    "contact": "Contact",
+    "contactSubtitle": "Suntem aici pentru tine! Contactează-ne pentru informații, oferte sau programări la service.",
+    "contactInfo": "Informații de Contact",
+    "contactInfoDesc": "Află cum să ne găsești și să ne contactezi",
+    "address": "Adresa",
+    "phone": "Telefon",
+    "email": "Email",
+    "program": "Program",
+    "programDetails": "Luni - Vineri: 9:00 - 17:00\nSâmbătă: 9:00 - 12:00\nDuminică: Închis",
+    "followUs": "Urmărește-ne",
+    "followUsDesc": "Rămâi conectat cu noi pe social media",
+    "ourLocation": "Locația Noastră",
+    "ourLocationDesc": "Vino să ne vizitezi în showroom-ul nostru"
+  },
+  "servicePage": {
+    "pageTitle": "Service Autorizat",
+    "pageSubtitle": "Service profesional autorizat pentru toate mărcile din portofoliu. Echipa noastră de specialiști garantează cele mai înalte standarde de calitate.",
+    "servicesTitle": "Serviciile Noastre",
+    "warrantyTitle": "Garanție și Calitate",
+    "warrantyText1": "Suntem service autorizat pentru toate mărcile din portofoliu, ceea ce înseamnă că toate lucrările efectuate sunt acoperite de garanția producătorului.",
+    "warrantyText2": "Utilizăm exclusiv piese originale și instrumente de diagnosticare omologate de producători pentru a garanta cea mai înaltă calitate a serviciilor.",
+    "extendedWarranty": "Garanție Extinsă",
+    "extendedWarrantyDetails": "Toate lucrările beneficiază de garanție extinsă de 12 luni sau 20.000 km, în funcție de ce vine primul.",
+    "appointmentTitle": "Programează o Întâlnire",
+    "appointmentSubtitle": "Contactează-ne pentru a programa o întâlnire la service. Oferim consultanță gratuită și estimări detaliate pentru toate serviciile.",
+    "bookOnline": "Programează Online",
+    "callNow": "Sună Acum: 0759 594 337",
+    "serviceList": [
+      "Revizie completă conform specificațiilor producătorului",
+      "Diagnosticare computerizată cu equipments de ultimă generație",
+      "Reparații motor, transmisie și sisteme electronice",
+      "Înlocuire piese originale și aftermarket de calitate",
+      "Service frâne, ambreiaj și sisteme de suspensie",
+      "Pregătire tehnică pentru sezonul de conducere",
+      "Consultanță tehnică și recomandări de mentenanță"
+    ],
+    "services": {
+      "authorizedService": {
+        "title": "Service Autorizat",
+        "description": "Service autorizat pentru toate mărcile din portofoliu"
+      },
+      "warrantyRepairs": {
+        "title": "Reparații în Garanție",
+        "description": "Toate reparațiile în garanție de producător"
+      },
+      "professionalMaintenance": {
+        "title": "Mentenanță Profesională",
+        "description": "Servicii complete de mentenanță și îngrijire"
+      },
+      "flexibleSchedule": {
+        "title": "Program Flexibil",
+        "description": "Programări flexibile adaptate nevoilor tale"
+      }
+    }
+  },
+  "motorcyclesPage": {
+    "title": "Motociclete",
+    "description": "Explorează gama noastră de motociclete de la cei mai respectați producători din lume",
+    "popularModels": "Modele populare:",
+    "viewDetails": "Vezi Detalii"
+  },
+  "equipmentsPage": {
+    "title": "Echipamente",
+    "description": "Echipament profesional de protecție pentru motocicliști, de la cele mai renumite mărci",
+    "availableBrands": "Mărci disponibile:",
+    "types": "Tipuri:",
+    "viewDetails": "Vezi Detalii",
+    "expertConsulting": "Consultanță Expertă",
+    "expertConsultingDescription": "Nu știi ce echipament să alegi? Experții noștri te vor ajuta să găsești echipamentul perfect pentru stilul tău de conducere și bugetul disponibil.",
+    "contactSpecialist": "Contactează Specialistul"
+  },
+  "cfMotoPage": {
+    "backToMotorcycles": "Înapoi la Motociclete",
+    "cfMoto": "CFMoto",
+    "description": "Motociclete moderne cu tehnologie avansată, oferind o combinație perfectă între performanță și accesibilitate",
+    "engine": "Motor:",
+    "power": "Putere:",
+    "features": "Caracteristici:",
+    "requestOffer": "Solicită Ofertă"
+  },
+  "kawasakiPage": {
+    "backToMotorcycles": "Înapoi la Motociclete",
+    "cfMoto": "CFMoto",
+    "description": "Motociclete moderne cu tehnologie avansată, oferind o combinație perfectă între performanță și accesibilitate",
+    "engine": "Motor:",
+    "power": "Putere:",
+    "features": "Caracteristici:",
+    "requestOffer": "Solicită Ofertă",
+    "abs": "ABS",
+    "cruiseControl": "Cruise Control",
+    "driftControl": "Control derapaj",
+    "tft": "TFT",
+    "registerable": "Inmatriculabil: Da",
+    "eligibleRabla": "Eligibil Rabla",
+    "price": "Preț:"
+  },
+  "yamahaPage": {
+    "backToMotorcycles": "Înapoi la Motociclete",
+    "yamaha": "Yamaha",
+    "description": "Inovație și calitate japoneză în fiecare motocicletă, pentru pasionații adevărați",
+    "engine": "Motor:",
+    "power": "Putere:",
+    "features": "Caracteristici:",
+    "requestOffer": "Solicită Ofertă",
+    "abs": "ABS",
+    "cruiseControl": "Cruise Control",
+    "driftControl": "Control derapaj",
+    "tft": "TFT",
+    "registerable": "Inmatriculabil: Da",
+    "eligibleRabla": "Eligibil Rabla",
+    "price": "Preț:"
+  },
+  "equipments": {
+    "helmetsTitle": "Helmets",
+    "helmetsDescription": "Maximum protection for the head",
+    "glovesBootsTitle": "Gloves / Boots",
+    "glovesBootsDescription": "Protection and control for hands/feet",
+    "gearTitle": "Equipment (Gear)",
+    "gearDescription": "Complete protective gear"
+  },
+  "brands": {
+    "kawasakiDescription": "Legendara marcă japoneză, cunoscută pentru performanță și fiabilitate",
+    "yamahaDescription": "Inovație și calitate japoneză în fiecare motocicletă. Performanță și aspect",
+    "cfmotoDescription": "Motorcycle moderne cu tehnologie avansată și prețuri competitive"
   }
 }

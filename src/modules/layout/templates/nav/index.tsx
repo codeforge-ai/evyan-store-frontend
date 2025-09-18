@@ -1,22 +1,23 @@
-import { listRegions } from "@lib/data/regions"
-import { StoreRegion } from "@medusajs/types"
+'use client'
+
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import CartButton from "@modules/layout/components/cart-button"
 import { ThemeToggle } from "@lib/components/theme-toggle"
 import LanguageSwitcher from "@modules/layout/components/language-switcher"
+import { useTranslations } from "next-intl"
 
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Tipuri Motociclism", path: "/motorcycling-types" },
-  { name: "Motociclete", path: "/motorcycles" },
-  { name: "Echipamente", path: "/equipments" },
-  { name: "Service", path: "/service" },
-  { name: "Contact", path: "/contact-us" },
-  { name: "Despre noi", path: "/about-us" },
-]
-
-export default async function Nav() {
+export default function Nav() {
+  const t = useTranslations("nav")
   // const regions = await listRegions().then((regions: StoreRegion[]) => regions)
+
+  const navItems = [
+    { name: t("home"), path: "/" },
+    { name: t("motorcyclingTypes"), path: "/motorcycling-types" },
+    { name: t("motorcycles"), path: "/motorcycles" },
+    { name: t("equipments"), path: "/equipments" },
+    { name: t("service"), path: "/service" },
+    { name: t("contact"), path: "/contact-us" },
+    { name: t("aboutUs"), path: "/about-us" }
+  ]
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border dark">
